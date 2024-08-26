@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from datalab.analysis import analyze_categorical_feature, analyze_numerical_feature
+from suraj_datalab.analysis import analyze_categorical_feature, analyze_numerical_feature
 
 # Sample DataFrame for testing
 def create_test_dataframe():
