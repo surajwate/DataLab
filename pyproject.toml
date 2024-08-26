@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "datalab"
+name = "suraj-datalab"
 version = "0.1.0"
 description = "A package for data analysis"
 authors = ["Suraj Wate <suraj.wate@gmail.com>"]
