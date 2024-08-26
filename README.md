@@ -3,7 +3,7 @@
 <!-- [![License](https://img.shields.io/pypi/l/suraj_datalab.svg)](https://github.com/surajwate/DataLab/blob/master/LICENSE) -->
 [![PyPI version](https://img.shields.io/pypi/v/suraj_datalab.svg)](https://pypi.org/project/suraj_datalab/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/surajwate/DataLab/actions/workflows/publish.yml/badge.svg)](https://github.com/surajwate/suraj_datalab/actions)
+[![Build Status](https://github.com/surajwate/DataLab/actions/workflows/publish.yml/badge.svg)](https://github.com/surajwate/DataLab/actions)
 
 `suraj_datalab` is a Python package designed to streamline the process of analyzing and visualizing both categorical and numerical data. It provides easy-to-use functions to help you better understand your datasets.
 
