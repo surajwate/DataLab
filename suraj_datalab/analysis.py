@@ -2,7 +2,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def analyze_categorical_feature(df, feature, target="Transported"):
+def categorical_feature(df, feature, target="Transported"):
     """
     Analyze a categorical feature in the context of the target variable.
     Parameters:
@@ -30,7 +30,7 @@ def analyze_categorical_feature(df, feature, target="Transported"):
     return summary_df
 
 
-def analyze_numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30):
+def numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30):
     """
     Analyze the distribution of a numerical feature and detect outliers.
     Parameters:

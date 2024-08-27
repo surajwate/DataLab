@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from suraj_datalab.analysis import analyze_categorical_feature, analyze_numerical_feature
+from suraj_datalab.analysis import categorical_feature, numerical_feature
 
 # Sample DataFrame for testing
 def create_test_dataframe():
@@ -13,7 +13,7 @@ def create_test_dataframe():
 
 def test_analyze_categorical_feature():
     df = create_test_dataframe()
-    result = analyze_categorical_feature(df, 'Feature')
+    result = categorical_feature(df, 'Feature')
     assert isinstance(result, pd.DataFrame)
     assert 'Count' in result.columns
     assert 'Percentage' in result.columns
@@ -27,7 +27,7 @@ def test_analyze_numerical_feature():
     })
     
     # Run the function
-    outliers_df, summary_df = analyze_numerical_feature(df, 'NumericFeature')
+    outliers_df, summary_df = numerical_feature(df, 'NumericFeature')
 
     # Check that the returned summary_df contains expected columns
     assert 'NumericFeature_Overall' in summary_df.index

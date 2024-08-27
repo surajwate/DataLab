@@ -1,1 +1,1 @@
-from .analysis import analyze_categorical_feature, analyze_numerical_feature
+from .analysis import categorical_feature, numerical_feature
