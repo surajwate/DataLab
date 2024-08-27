@@ -2,6 +2,18 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
+def is_jupyter_notebook():
+    try:
+        shell = get_ipython().__class__.__name__
+        if 'ZMQInteractiveShell' in shell:
+            return True  # Jupyter notebook or JupyterLab
+        elif 'TerminalInteractiveShell' in shell:
+            return False  # Terminal running IPython
+        else:
+            return False  # Other type (likely terminal)
+    except NameError:
+        return False  # Probably standard Python interpreter
+
 def categorical_feature(df, feature, target="Transported"):
     """
     Analyze a categorical feature in the context of the target variable.
@@ -24,7 +36,10 @@ def categorical_feature(df, feature, target="Transported"):
     # Plot the feature distribution with respect to the target
     sns.countplot(df, x=feature, hue=target)
     plt.title(f'Distribution of {feature} with respect to {target}')
-    plt.show()
+    if is_jupyter_notebook():
+        plt.show()  # Show plot if in Jupyter notebook
+    else:
+        plt.savefig(f'./plots/{feature}-{target}-boxplot.png')
 
     # Return the summary dataframe
     return summary_df
@@ -80,7 +95,10 @@ def numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30
 
     print(f"Analysis of the {feature_col} column:\n")
     # Display the plots
-    plt.show()
+    if is_jupyter_notebook():
+        plt.show()  # Show plot if in Jupyter notebook
+    else:
+        plt.savefig(f'./plots/{feature_col}-{target_col}-boxplot.png')
 
     # Calculate overall statistics
     overall_summary = df[feature_col].describe().to_frame().T
