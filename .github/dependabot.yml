@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "poetry" # For a Python project using Poetry
+  - package-ecosystem: "pip" # For a Python project using Poetry
     directory: "/" # Location of the pyproject.toml file
     schedule:
       interval: "weekly" # Check for updates weekly
