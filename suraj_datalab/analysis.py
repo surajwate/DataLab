@@ -40,6 +40,7 @@ def analyze_numerical_feature(df, feature_col, target_col=None, figsize=(15, 6),
     - figsize: tuple, the size of the figure for the plots.
     - bins: int, the number of bins for the histogram.
     Returns:
+    - outliers_df: pandas DataFrame, a summary of the percentage of outliers in the data.
     - summary_df: pandas DataFrame, a summary of statistics for the overall feature data and outliers.
     """
     # Check if feature_col exists in the dataframe

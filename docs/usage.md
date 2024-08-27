@@ -27,7 +27,7 @@ This will output a summary of the dataset, including basic statistical measures 
 
 ## `summary_statistics` Function
 
-The `summary_statistics` function generates comprehensive summary statistics for your dataset. 
+The `summary_statistics` function generates comprehensive summary statistics for your dataset.
 
 ### Example
 
