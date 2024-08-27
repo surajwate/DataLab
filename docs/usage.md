@@ -1,26 +1,62 @@
 # Usage Guide for Suraj DataLab
 
-This guide will show you how to use the functions available in the **Suraj DataLab** package for analyzing categorical and numerical features.
+This guide provides detailed instructions and examples on how to use the functions provided by the `suraj_datalab` package.
 
-## Analyzing Categorical Features
+## `analyze_data` Function
 
-You can analyze categorical features in your dataset using the `analyze_categorical_feature` function. This function helps you understand the distribution of a categorical feature with respect to a target variable.
+The `analyze_data` function is designed to provide a quick statistical analysis of your dataset. Here’s how you can use it:
 
-### Example Usage
+### Example
 
 ```python
 import pandas as pd
-from suraj_datalab.analysis import analyze_categorical_feature
+from suraj_datalab.analysis import analyze_data
 
-# Example dataframe
+# Create a sample DataFrame
 data = {
-    'Category': ['A', 'B', 'A', 'B', 'C', 'C', 'A'],
-    'Transported': [True, False, True, True, False, False, True]
+    'A': [1, 2, 3, 4, 5],
+    'B': [10, 20, 30, 40, 50]
 }
 df = pd.DataFrame(data)
 
-# Analyze the 'Category' feature
-summary_df = analyze_categorical_feature(df, feature='Category', target='Transported')
+# Analyze the data
+analyze_data(df)
+```
 
-# View the summary
-print(summary_df)
+This will output a summary of the dataset, including basic statistical measures like mean, median, and standard deviation for each column.
+
+## `summary_statistics` Function
+
+The `summary_statistics` function generates comprehensive summary statistics for your dataset. 
+
+### Example
+
+```python
+import pandas as pd
+from suraj_datalab.analysis import summary_statistics
+
+# Create a sample DataFrame
+data = {
+    'A': [1, 2, 3, 4, 5],
+    'B': [10, 20, 30, 40, 50]
+}
+df = pd.DataFrame(data)
+
+# Generate summary statistics
+summary = summary_statistics(df)
+print(summary)
+```
+
+This will return a pandas DataFrame with summary statistics such as count, mean, standard deviation, min, max, and percentiles.
+
+## Cross-references
+
+For a general overview and more information about the project, please visit the [Project Overview](index.md).
+
+## Additional Resources
+
+For more details about my work and other projects, visit my [personal website](https://surajwate.com).
+
+---
+
+If you have any questions or run into issues, please check the [GitHub repository](https://github.com/surajwate/DataLab) for additional help or to open an issue.
