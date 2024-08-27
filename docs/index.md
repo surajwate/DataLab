@@ -1,9 +1,20 @@
-# Welcome to DataLab
+# Suraj DataLab
 
-DataLab is a comprehensive toolkit for data analysis and visualization. This documentation will guide you through the features and usage of DataLab.
+Welcome to **Suraj DataLab** - a simple yet powerful Python package designed for basic data analysis, particularly focused on analyzing categorical and numerical features within datasets.
 
-## Features
+## Overview
 
-- Analyze categorical and numerical data
-- Visualize distributions and relationships
-- Generate summary statistics
+This package provides functions that help with:
+
+- Analyzing categorical features against a target variable to understand distribution and relationships.
+- Analyzing numerical features to understand their distribution and detect potential outliers.
+
+These tools are ideal for initial exploratory data analysis (EDA) to gain insights into your dataset.
+
+## Installation
+
+To install the package, use the following command:
+
+```bash
+pip install suraj_datalab
+```
