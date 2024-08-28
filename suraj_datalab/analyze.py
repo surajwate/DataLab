@@ -81,17 +81,18 @@ def categorical_feature(df, feature, target):
 
 def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
     """
-    Analyze the distribution of a numerical feature and detect outliers.
+    Analyzes a numerical feature in a dataframe.
     Parameters:
-    - df: pandas DataFrame, the dataset containing the numerical feature.
-    - feature_col: str, the name of the numerical feature column to analyze.
-    - target_col: str, the target column to compare against (for the box plot). Optional.
-    - figsize: tuple, the size of the figure for the plots.
-    - bins: int, the number of bins for the histogram.
+    - df (pandas.DataFrame): The dataframe containing the data.
+    - feature (str): The name of the numerical feature to analyze.
+    - target (str, optional): The name of the target column for grouping the analysis. Default is None.
+    - figsize (tuple, optional): The size of the figure. Default is (15, 6).
+    - bins (int, optional): The number of bins for the histogram. Default is 30.
     Returns:
-    - outliers_df: pandas DataFrame, a summary of the percentage of outliers in the data.
-    - summary_df: pandas DataFrame, a summary of statistics for the overall feature data and outliers.
+    - outliers_df (pandas.DataFrame): A dataframe containing the percentage of outliers in the data.
+    - summary_df (pandas.DataFrame): A dataframe containing the overall statistics, lower outliers statistics, and upper outliers statistics.
     """
+
     # Check if feature_col exists in the dataframe
     if feature not in df.columns:
         raise ValueError(f"Column '{feature}' not found in the dataframe.")
