@@ -176,3 +176,32 @@ def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
     )
 
     return outliers_df, summary_df
+
+
+def missing_values(dataframe):
+    """
+    Generates a summary of missing values in the dataframe.
+
+    Parameters:
+    dataframe (pd.DataFrame): The input dataframe to analyze.
+
+    Returns:
+    pd.DataFrame: A dataframe containing the count and percentage of missing values,
+                  along with the data type of each column that has missing values.
+    """
+    missing_values_summary = pd.DataFrame(
+        {
+            "Missing Count": dataframe.isnull().sum(),
+            "Missing Percentage": (
+                dataframe.isnull().sum() / len(dataframe) * 100
+            ).round(2),
+            "Data Type": dataframe.dtypes,
+        }
+    )
+
+    # Filter out columns with no missing values
+    missing_values_summary = missing_values_summary[
+        missing_values_summary["Missing Count"] > 0
+    ]
+
+    return missing_values_summary
