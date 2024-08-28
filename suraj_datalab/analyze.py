@@ -1,6 +1,7 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
+from IPython import get_ipython
 
 def is_jupyter_notebook():
     try:
