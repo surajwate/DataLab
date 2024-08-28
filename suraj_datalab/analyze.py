@@ -45,7 +45,7 @@ def categorical_feature(df, feature, target="Transported"):
     return summary_df
 
 
-def numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30):
+def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
     """
     Analyze the distribution of a numerical feature and detect outliers.
     Parameters:
@@ -59,33 +59,33 @@ def numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30
     - summary_df: pandas DataFrame, a summary of statistics for the overall feature data and outliers.
     """
     # Check if feature_col exists in the dataframe
-    if feature_col not in df.columns:
-        raise ValueError(f"Column '{feature_col}' not found in the dataframe.")
+    if feature not in df.columns:
+        raise ValueError(f"Column '{feature}' not found in the dataframe.")
     
     # Check if target_col exists in the dataframe (if provided)
-    if target_col and target_col not in df.columns:
-        raise ValueError(f"Column '{target_col}' not found in the dataframe.")
+    if target and target not in df.columns:
+        raise ValueError(f"Column '{target}' not found in the dataframe.")
     
     # Create the figure and subplots
     fig, ax = plt.subplots(2, 1, figsize=figsize, sharex=True)
 
     # First plot: Histogram with KDE
-    sns.histplot(df, x=feature_col, kde=True, ax=ax[0], bins=bins)
-    ax[0].set_title(f'Distribution of {feature_col} with KDE')
+    sns.histplot(df, x=feature, kde=True, ax=ax[0], bins=bins)
+    ax[0].set_title(f'Distribution of {feature} with KDE')
     ax[0].set_ylabel('Frequency')
     ax[0].grid(True, which='both', linestyle='--', linewidth=0.5)
 
     # Second plot: Boxplot of the feature by the target (if provided)
-    if target_col:
+    if target:
         # Check seaborn version to decide whether to include the 'gap' parameter
         if sns.__version__ >= '0.13':
-            sns.boxplot(df, x=feature_col, ax=ax[1], hue=target_col, gap=0.05)
+            sns.boxplot(df, x=feature, ax=ax[1], hue=target, gap=0.05)
         else:
-            sns.boxplot(df, x=feature_col, ax=ax[1], hue=target_col)
-        ax[1].set_title(f'Box Plot of {feature_col} by {target_col} Status')
+            sns.boxplot(df, x=feature, ax=ax[1], hue=target)
+        ax[1].set_title(f'Box Plot of {feature} by {target} Status')
     else:
-        sns.boxplot(df, x=feature_col, ax=ax[1])
-        ax[1].set_title(f'Box Plot of {feature_col}')
+        sns.boxplot(df, x=feature, ax=ax[1])
+        ax[1].set_title(f'Box Plot of {feature}')
 
     ax[1].set_ylabel('')
     ax[1].grid(True, which='both', linestyle='--', linewidth=0.5)
@@ -93,35 +93,35 @@ def numerical_feature(df, feature_col, target_col=None, figsize=(15, 6), bins=30
     # Adjust layout for better spacing
     plt.tight_layout()
 
-    print(f"Analysis of the {feature_col} column:\n")
+    print(f"Analysis of the {feature} column:\n")
     # Display the plots
     if is_jupyter_notebook():
         plt.show()  # Show plot if in Jupyter notebook
     else:
-        plt.savefig(f'./plots/{feature_col}-{target_col}-boxplot.png')
+        plt.savefig(f'./plots/{feature}-{target}-boxplot.png')
 
     # Calculate overall statistics
-    overall_summary = df[feature_col].describe().to_frame().T
-    overall_summary.index = [f'{feature_col}_Overall']
+    overall_summary = df[feature].describe().to_frame().T
+    overall_summary.index = [f'{feature}_Overall']
 
     # Calculate the lower and upper bounds for outliers
-    Q1 = df[feature_col].quantile(0.25)
-    Q3 = df[feature_col].quantile(0.75)
+    Q1 = df[feature].quantile(0.25)
+    Q3 = df[feature].quantile(0.75)
     IQR = Q3 - Q1
 
     lower_bound = Q1 - 1.5 * IQR
     upper_bound = Q3 + 1.5 * IQR
 
     # Identify lower and upper bound outliers
-    lower_outliers = df[df[feature_col] < lower_bound]
-    upper_outliers = df[df[feature_col] > upper_bound]
+    lower_outliers = df[df[feature] < lower_bound]
+    upper_outliers = df[df[feature] > upper_bound]
 
     # Get descriptive statistics for lower and upper outliers
-    lower_outliers_summary = lower_outliers[feature_col].describe().to_frame().T
-    lower_outliers_summary.index = [f'{feature_col}_Lower_Outliers']
+    lower_outliers_summary = lower_outliers[feature].describe().to_frame().T
+    lower_outliers_summary.index = [f'{feature}_Lower_Outliers']
 
-    upper_outliers_summary = upper_outliers[feature_col].describe().to_frame().T
-    upper_outliers_summary.index = [f'{feature_col}_Upper_Outliers']
+    upper_outliers_summary = upper_outliers[feature].describe().to_frame().T
+    upper_outliers_summary.index = [f'{feature}_Upper_Outliers']
 
     # Combine overall statistics with lower and upper outlier statistics
     summary_df = pd.concat([overall_summary, lower_outliers_summary, upper_outliers_summary])
