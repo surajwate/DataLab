@@ -74,11 +74,11 @@ For a detailed reference of all available functions and classes, see the [API Re
 
 ## Contributing
 
-Contributions are welcome! Please read the [Contributing Guidelines](CONTRIBUTING.md) for more details.
+We welcome contributions! Please see our [Contributing Guidelines](https://github.com/surajwate/DataLab/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/surajwate/DataLab/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
 
