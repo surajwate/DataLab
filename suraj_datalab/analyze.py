@@ -1,5 +1,6 @@
 import seaborn as sns
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from IPython import get_ipython
 import os
@@ -79,7 +80,7 @@ def categorical_feature(df, feature, target):
     return category_distribution
 
 
-def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
+def numerical_feature(df, feature, target=None, figsize=(15, 6), bins="sturges"):
     """
     Analyzes a numerical feature in a dataframe.
     Parameters:
@@ -87,19 +88,36 @@ def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
     - feature (str): The name of the numerical feature to analyze.
     - target (str, optional): The name of the target column for grouping the analysis. Default is None.
     - figsize (tuple, optional): The size of the figure. Default is (15, 6).
-    - bins (int, optional): The number of bins for the histogram. Default is 30.
+    - bins (int, str, optional): The number of bins for the histogram or the method to calculate it. Default is 'sturges'.
     Returns:
     - outliers_df (pandas.DataFrame): A dataframe containing the percentage of outliers in the data.
     - summary_df (pandas.DataFrame): A dataframe containing the overall statistics, lower outliers statistics, and upper outliers statistics.
     """
 
-    # Check if feature_col exists in the dataframe
     if feature not in df.columns:
         raise ValueError(f"Column '{feature}' not found in the dataframe.")
 
-    # Check if target_col exists in the dataframe (if provided)
     if target and target not in df.columns:
         raise ValueError(f"Column '{target}' not found in the dataframe.")
+
+    # Calculate the number of bins if a method is provided
+    if isinstance(bins, str):
+        if bins == "sturges":
+            bins = int(np.ceil(np.log2(len(df[feature])) + 1))
+        elif bins == "rice":
+            bins = int(np.ceil(2 * len(df[feature]) ** (1 / 3)))
+        elif bins == "scott":
+            bin_width = 3.5 * df[feature].std() * len(df[feature]) ** (-1 / 3)
+            bins = int(np.ceil((df[feature].max() - df[feature].min()) / bin_width))
+        elif bins == "fd":  # Freedman-Diaconis
+            bin_width = (
+                2
+                * (df[feature].quantile(0.75) - df[feature].quantile(0.25))
+                * len(df[feature]) ** (-1 / 3)
+            )
+            bins = int(np.ceil((df[feature].max() - df[feature].min()) / bin_width))
+        else:
+            raise ValueError(f"Unknown binning method: '{bins}'")
 
     # Create the figure and subplots
     fig, ax = plt.subplots(2, 1, figsize=figsize, sharex=True)
@@ -128,7 +146,6 @@ def numerical_feature(df, feature, target=None, figsize=(15, 6), bins=30):
     # Adjust layout for better spacing
     plt.tight_layout()
 
-    print(f"Analysis of the {feature} column:\n")
     # Display the plots
     if is_jupyter_notebook():
         plt.show()  # Show plot if in Jupyter notebook
