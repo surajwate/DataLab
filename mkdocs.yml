@@ -1,8 +1,37 @@
-site_name: DataLab Documentation
+site_name: Suraj DataLab Documentation
+
 theme:
   name: material
+  logo: "images/logo.png" # Path to your logo file
+  favicon: "images/favicon.ico" # Path to your favicon file
+  palette:
+    scheme: default # You can use 'slate', 'default', or customize your own colors
+    primary: "deep purple" # Set to match your main website's primary color
+    accent: "amber" # Set to match your main website's accent color
+  font:
+    text: "Roboto" # Change to match the typography on your main website
+    code: "Fira Code" # You can choose another monospace font if preferred
+
 nav:
   - Home: index.md
   - Usage: usage.md
   - API Reference: api_reference.md
   - Examples: examples.md
+  - Main Website: https://surajwate.com/ # Add link to your main website
+
+# extra_css:
+#   - "css/custom.css" # Add custom CSS for additional styling
+
+# extra_javascript:
+#   - "js/custom.js" # Add custom JavaScript if needed (optional)
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/surajwate/DataLab
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/surajwate
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/surajwate
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@suraj

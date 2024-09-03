@@ -6,7 +6,7 @@ This document provides a detailed reference for all the classes and functions av
 
 - [analyze](#analyze-module)
 - [clean](#clean-module)
-- [fold_creator](#fold_creator-module)
+- [fold_creator](#fold-creator-module)
 
 ## Analyze Module
 
