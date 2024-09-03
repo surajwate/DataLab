@@ -1,0 +1,768 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../usage/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>API Reference - DataLab Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DataLab Documentation" class="md-header__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DataLab Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DataLab Documentation" class="md-nav__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DataLab Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyze-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyze Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorical_featuredf-feature-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      categorical_feature(df, feature, target)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numerical_featuredf-feature-targetnone-figsize15-6-binssturges" class="md-nav__link">
+    <span class="md-ellipsis">
+      numerical_feature(df, feature, target=None, figsize=(15, 6), bins="sturges")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing_valuesdataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      missing_values(dataframe)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clean Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rarecategoryreplacercolumns-proportion_threshold002-replacement_valueothers" class="md-nav__link">
+    <span class="md-ellipsis">
+      RareCategoryReplacer(columns, proportion_threshold=0.02, replacement_value="Others")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fold-creator-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fold Creator Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fold Creator Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create_kfoldsfile_path-n_splits5-shuffletrue-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_kfolds(file_path, n_splits=5, shuffle=True, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_classification_kfoldsfile_path-target_column-n_splits5-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_classification_kfolds(file_path, target_column, n_splits=5, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_regression_kfoldsfile_path-target_column-n_splits5-binning_methodsturges-custom_binsnone-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_regression_kfolds(file_path, target_column, n_splits=5, binning_method="sturges", custom_bins=None, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn More
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyze-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyze Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorical_featuredf-feature-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      categorical_feature(df, feature, target)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numerical_featuredf-feature-targetnone-figsize15-6-binssturges" class="md-nav__link">
+    <span class="md-ellipsis">
+      numerical_feature(df, feature, target=None, figsize=(15, 6), bins="sturges")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing_valuesdataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      missing_values(dataframe)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clean Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rarecategoryreplacercolumns-proportion_threshold002-replacement_valueothers" class="md-nav__link">
+    <span class="md-ellipsis">
+      RareCategoryReplacer(columns, proportion_threshold=0.02, replacement_value="Others")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fold-creator-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fold Creator Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fold Creator Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create_kfoldsfile_path-n_splits5-shuffletrue-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_kfolds(file_path, n_splits=5, shuffle=True, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_classification_kfoldsfile_path-target_column-n_splits5-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_classification_kfolds(file_path, target_column, n_splits=5, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_regression_kfoldsfile_path-target_column-n_splits5-binning_methodsturges-custom_binsnone-random_state42-save_pathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_regression_kfolds(file_path, target_column, n_splits=5, binning_method="sturges", custom_bins=None, random_state=42, save_path=None)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn More
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api-reference">API Reference</h1>
+<p>This document provides a detailed reference for all the classes and functions available in the <code>suraj_datalab</code> package.</p>
+<h2 id="modules">Modules</h2>
+<ul>
+<li><a href="#analyze-module">analyze</a></li>
+<li><a href="#clean-module">clean</a></li>
+<li><a href="#fold_creator-module">fold_creator</a></li>
+</ul>
+<h2 id="analyze-module">Analyze Module</h2>
+<h3 id="categorical_featuredf-feature-target"><code>categorical_feature(df, feature, target)</code></h3>
+<p>Analyze the distribution of a categorical feature with respect to a target variable.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>df (pandas.DataFrame)</code>: The input DataFrame.</li>
+<li><code>feature (str)</code>: The name of the categorical feature to analyze.</li>
+<li><code>target (str)</code>: The name of the target variable.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: A DataFrame containing the distribution of the feature with respect to the target.</li>
+</ul>
+<h3 id="numerical_featuredf-feature-targetnone-figsize15-6-binssturges"><code>numerical_feature(df, feature, target=None, figsize=(15, 6), bins="sturges")</code></h3>
+<p>Analyze the distribution of a numerical feature, with optional grouping by a target variable.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>df (pandas.DataFrame)</code>: The input DataFrame.</li>
+<li><code>feature (str)</code>: The name of the numerical feature to analyze.</li>
+<li><code>target (str, optional)</code>: The name of the target column for grouping the analysis. Default is <code>None</code>.</li>
+<li><code>figsize (tuple, optional)</code>: The size of the figure. Default is <code>(15, 6)</code>.</li>
+<li><code>bins (int or str, optional)</code>: The number of bins or the method to calculate them. Default is <code>"sturges"</code>.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: A DataFrame containing outlier percentages and summary statistics.</li>
+</ul>
+<h3 id="missing_valuesdataframe"><code>missing_values(dataframe)</code></h3>
+<p>Generate a summary of missing values in the DataFrame.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>dataframe (pandas.DataFrame)</code>: The input DataFrame.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: A DataFrame containing missing values count, percentage, and data types for columns with missing values.</li>
+</ul>
+<h2 id="clean-module">Clean Module</h2>
+<h3 id="rarecategoryreplacercolumns-proportion_threshold002-replacement_valueothers"><code>RareCategoryReplacer(columns, proportion_threshold=0.02, replacement_value="Others")</code></h3>
+<p>Class for replacing rare categories in specified columns of a DataFrame.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>columns (list)</code>: List of column names to apply the rare category replacement.</li>
+<li><code>proportion_threshold (float, optional)</code>: Threshold below which a category is considered rare. Default is <code>0.02</code>.</li>
+<li><code>replacement_value (str, optional)</code>: Value to replace rare categories with. Default is <code>"Others"</code>.</li>
+</ul>
+<p><strong>Attributes:</strong></p>
+<ul>
+<li><code>rare_categories_ (dict)</code>: Dictionary containing the rare categories for each specified column.</li>
+<li><code>important_categories_ (dict)</code>: Dictionary containing the important categories for each specified column.</li>
+</ul>
+<p><strong>Methods:</strong></p>
+<ul>
+<li><code>fit(X, y=None)</code>: Fit the transformer by calculating rare categories.</li>
+<li><code>transform(X)</code>: Transform the data by replacing rare categories.</li>
+<li><code>fit_transform(X, y=None)</code>: Fit and transform the data in a single step.</li>
+</ul>
+<h2 id="fold-creator-module">Fold Creator Module</h2>
+<h3 id="create_kfoldsfile_path-n_splits5-shuffletrue-random_state42-save_pathnone"><code>create_kfolds(file_path, n_splits=5, shuffle=True, random_state=42, save_path=None)</code></h3>
+<p>Create K-Fold indices for a dataset loaded from a CSV file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>file_path (str)</code>: Path to the input CSV file.</li>
+<li><code>n_splits (int, optional)</code>: Number of folds. Default is <code>5</code>.</li>
+<li><code>shuffle (bool, optional)</code>: Whether to shuffle the data. Default is <code>True</code>.</li>
+<li><code>random_state (int, optional)</code>: Seed for the random number generator. Default is <code>42</code>.</li>
+<li><code>save_path (str, optional)</code>: Path to save the CSV file. If <code>None</code>, the file is not saved.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: DataFrame with an additional <code>kfold</code> column.</li>
+</ul>
+<h3 id="create_classification_kfoldsfile_path-target_column-n_splits5-random_state42-save_pathnone"><code>create_classification_kfolds(file_path, target_column, n_splits=5, random_state=42, save_path=None)</code></h3>
+<p>Create stratified K-Fold indices for classification tasks from a CSV file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>file_path (str)</code>: Path to the input CSV file.</li>
+<li><code>target_column (str)</code>: The name of the target column.</li>
+<li><code>n_splits (int, optional)</code>: Number of folds. Default is <code>5</code>.</li>
+<li><code>random_state (int, optional)</code>: Seed for the random number generator. Default is <code>42</code>.</li>
+<li><code>save_path (str, optional)</code>: Path to save the CSV file. If <code>None</code>, the file is not saved.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: DataFrame with an additional <code>kfold</code> column.</li>
+</ul>
+<h3 id="create_regression_kfoldsfile_path-target_column-n_splits5-binning_methodsturges-custom_binsnone-random_state42-save_pathnone"><code>create_regression_kfolds(file_path, target_column, n_splits=5, binning_method="sturges", custom_bins=None, random_state=42, save_path=None)</code></h3>
+<p>Create stratified K-Fold indices for regression tasks using various binning methods from a CSV file.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>file_path (str)</code>: Path to the input CSV file.</li>
+<li><code>target_column (str)</code>: The name of the target column.</li>
+<li><code>n_splits (int, optional)</code>: Number of folds. Default is <code>5</code>.</li>
+<li><code>binning_method (str, optional)</code>: Method for binning the target variable. Options: <code>'sturges'</code>, <code>'quantile'</code>, <code>'kmeans'</code>, <code>'custom'</code>. Default is <code>'sturges'</code>.</li>
+<li><code>custom_bins (list, optional)</code>: List of bin edges for custom binning. Required if <code>binning_method</code> is <code>'custom'</code>.</li>
+<li><code>random_state (int, optional)</code>: Seed for the random number generator. Default is <code>42</code>.</li>
+<li><code>save_path (str, optional)</code>: Path to save the CSV file. If <code>None</code>, the file is not saved.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas.DataFrame</code>: DataFrame with an additional <code>kfold</code> column.</li>
+</ul>
+<h2 id="learn-more">Learn More</h2>
+<p>For detailed usage instructions, please visit the <a href="../usage/">Usage Guide</a>.</p>
+<p>For more information about my work, other projects, or to get in touch, visit my <a href="https://surajwate.com">personal website</a></p>
+<hr />
+<p>If you have any feedback or suggestions, feel free to open an issue on <a href="https://github.com/surajwate/DataLab">GitHub</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

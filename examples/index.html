@@ -1,0 +1,1189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../api_reference/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Examples - DataLab Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DataLab Documentation" class="md-header__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DataLab Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DataLab Documentation" class="md-nav__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DataLab Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-1-analyzing-a-categorical-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Analyzing a Categorical Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 1: Analyzing a Categorical Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-analyzing-a-numerical-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Analyzing a Numerical Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 2: Analyzing a Numerical Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-handling-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Handling Missing Values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 3: Handling Missing Values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-4-replacing-rare-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 4: Replacing Rare Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 4: Replacing Rare Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-5-creating-k-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5: Creating K-Folds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 5: Creating K-Folds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-6-stratified-k-folds-for-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 6: Stratified K-Folds for Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 6: Stratified K-Folds for Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-7-stratified-k-folds-for-regression-with-sturges-binning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 7: Stratified K-Folds for Regression with Sturges' Binning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 7: Stratified K-Folds for Regression with Sturges' Binning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn More
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-1-analyzing-a-categorical-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Analyzing a Categorical Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 1: Analyzing a Categorical Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-analyzing-a-numerical-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Analyzing a Numerical Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 2: Analyzing a Numerical Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-handling-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 3: Handling Missing Values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 3: Handling Missing Values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-4-replacing-rare-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 4: Replacing Rare Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 4: Replacing Rare Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-5-creating-k-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5: Creating K-Folds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 5: Creating K-Folds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-6-stratified-k-folds-for-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 6: Stratified K-Folds for Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 6: Stratified K-Folds for Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-7-stratified-k-folds-for-regression-with-sturges-binning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 7: Stratified K-Folds for Regression with Sturges' Binning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 7: Stratified K-Folds for Regression with Sturges' Binning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learn More
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="examples">Examples</h1>
+<p>This document provides practical examples of how to use the <code>suraj_datalab</code> package. Each example demonstrates a specific feature, complete with sample code and expected outputs.</p>
+<h2 id="example-1-analyzing-a-categorical-feature">Example 1: Analyzing a Categorical Feature</h2>
+<h3 id="scenario">Scenario</h3>
+<p>You have a dataset with a categorical feature, and you want to analyze its distribution with respect to a target variable.</p>
+<h3 id="code">Code</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Sample DataFrame
+data = {
+    'Category': ['A', 'B', 'A', 'C', 'B', 'A', 'C', 'A'],
+    'Target': [1, 0, 1, 0, 1, 0, 0, 1]
+}
+df = pd.DataFrame(data)
+
+# Analyze the categorical feature
+distribution = analyze.categorical_feature(df, 'Category', 'Target')
+print(distribution)
+</code></pre>
+<h3 id="expected-output">Expected Output</h3>
+<pre><code class="language-plaintext">  Total Count  Total Percentage  0 of Total (%)  1 of Total (%)  0 within Category (%)  1 within Category (%)
+A            4              50.0            25.0            75.0                  25.0                  75.0
+B            2              25.0            50.0            50.0                  50.0                  50.0
+C            2              25.0            75.0            25.0                  75.0                  25.0
+</code></pre>
+<p>A plot showing the distribution of the <code>Category</code> feature by the <code>Target</code> variable will also be generated.</p>
+<h2 id="example-2-analyzing-a-numerical-feature">Example 2: Analyzing a Numerical Feature</h2>
+<h3 id="scenario_1">Scenario</h3>
+<p>You want to analyze the distribution of a numerical feature, identify outliers, and visualize the data.</p>
+<h3 id="code_1">Code</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Sample DataFrame
+data = {
+    'NumericalFeature': [10, 12, 10, 22, 23, 45, 47, 50],
+    'Target': [1, 1, 0, 0, 1, 1, 0, 0]
+}
+df = pd.DataFrame(data)
+
+# Analyze the numerical feature
+outliers_df, summary_df = analyze.numerical_feature(df, 'NumericalFeature', 'Target')
+print(outliers_df)
+print(summary_df)
+</code></pre>
+<h3 id="expected-output_1">Expected Output</h3>
+<pre><code class="language-plaintext">   Outlier Percentage  Lower Outliers Percentage  Upper Outliers Percentage
+0                 25.0                        0.0                       25.0
+
+         count  mean  std   min   25%   50%   75%   max
+Overall     8  27.375  18.518  10.0  12.5  22.5  46.5  50.0
+Lower_Outliers 0  NaN   NaN    NaN   NaN   NaN   NaN   NaN
+Upper_Outliers 2  48.5   1.5  47.0  47.75  48.5  49.25  50.0
+</code></pre>
+<p>Histograms and boxplots for the <code>NumericalFeature</code> will be generated.</p>
+<h2 id="example-3-handling-missing-values">Example 3: Handling Missing Values</h2>
+<h3 id="scenario_2">Scenario</h3>
+<p>You have a dataset with missing values and want to generate a summary.</p>
+<h3 id="code_2">Code</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Sample DataFrame
+data = {
+    'Feature1': [1, 2, None, 4, 5],
+    'Feature2': [None, 2, 3, 4, None],
+    'Feature3': [1, None, 3, None, 5]
+}
+df = pd.DataFrame(data)
+
+# Get missing values summary
+missing_summary = analyze.missing_values(df)
+print(missing_summary)
+</code></pre>
+<h3 id="expected-output_2">Expected Output</h3>
+<pre><code class="language-plaintext">          Missing Count  Missing Percentage  Data Type
+Feature1              1                20.0    float64
+Feature2              2                40.0    float64
+Feature3              2                40.0    float64
+</code></pre>
+<h2 id="example-4-replacing-rare-categories">Example 4: Replacing Rare Categories</h2>
+<h3 id="scenario_3">Scenario</h3>
+<p>You need to replace rare categories in your dataset with a specified value.</p>
+<h3 id="code_3">Code</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab.clean import RareCategoryReplacer
+
+# Sample DataFrame
+data = {
+    'Category': ['A', 'B', 'C', 'A', 'B', 'A', 'C', 'D', 'E', 'F', 'A'],
+}
+df = pd.DataFrame(data)
+
+# Define the columns to replace rare categories in
+columns_to_replace = ['Category']
+
+# Create an instance of the RareCategoryReplacer
+replacer = RareCategoryReplacer(columns=columns_to_replace, proportion_threshold=0.2, replacement_value=&quot;Others&quot;)
+
+# Fit and transform the dataset
+df_transformed = replacer.fit_transform(df)
+print(df_transformed)
+</code></pre>
+<h3 id="expected-output_3">Expected Output</h3>
+<pre><code class="language-plaintext">  Category
+0        A
+1        B
+2    Others
+3        A
+4        B
+5        A
+6    Others
+7    Others
+8    Others
+9    Others
+10       A
+</code></pre>
+<h2 id="example-5-creating-k-folds">Example 5: Creating K-Folds</h2>
+<h3 id="scenario_4">Scenario</h3>
+<p>You want to create K-Folds for cross-validation on a dataset.</p>
+<h3 id="code_4">Code</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_kfolds
+
+# Create K-Folds for a dataset
+kfold_data = create_kfolds(file_path=&quot;your_dataset.csv&quot;, n_splits=5, shuffle=True, random_state=42)
+print(kfold_data.head())
+</code></pre>
+<h3 id="expected-output_4">Expected Output</h3>
+<p>A new CSV file with an additional <code>kfold</code> column indicating the fold assignment for each row in the dataset.</p>
+<pre><code class="language-plaintext">   Feature1  Feature2  kfold
+0       ...       ...      0
+1       ...       ...      1
+2       ...       ...      4
+3       ...       ...      3
+4       ...       ...      2
+</code></pre>
+<h2 id="example-6-stratified-k-folds-for-classification">Example 6: Stratified K-Folds for Classification</h2>
+<h3 id="scenario_5">Scenario</h3>
+<p>You want to create stratified K-Folds for a classification problem to ensure balanced folds.</p>
+<h3 id="code_5">Code</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_classification_kfolds
+
+# Create Stratified K-Folds for a classification dataset
+stratified_classification_data = create_classification_kfolds(
+    file_path=&quot;your_dataset.csv&quot;, target_column=&quot;target&quot;, n_splits=5, random_state=42
+)
+print(stratified_classification_data.head())
+</code></pre>
+<h3 id="expected-output_5">Expected Output</h3>
+<p>A new CSV file with an additional <code>kfold</code> column indicating the fold assignment, stratified by the target variable.</p>
+<pre><code class="language-plaintext">   Feature1  Feature2  target  kfold
+0       ...       ...      0      1
+1       ...       ...      1      3
+2       ...       ...      0      4
+3       ...       ...      1      0
+4       ...       ...      1      2
+</code></pre>
+<h2 id="example-7-stratified-k-folds-for-regression-with-sturges-binning">Example 7: Stratified K-Folds for Regression with Sturges' Binning</h2>
+<h3 id="scenario_6">Scenario</h3>
+<p>You want to create stratified K-Folds for a regression problem using Sturges' binning method.</p>
+<h3 id="code_6">Code</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_regression_kfolds
+
+# Create Stratified K-Folds for a regression dataset using 'sturges' binning method
+stratified_regression_data = create_regression_kfolds(
+    file_path=&quot;your_dataset.csv&quot;, target_column=&quot;target&quot;, n_splits=5, binning_method='sturges', random_state=42
+)
+print(stratified_regression_data.head())
+</code></pre>
+<h3 id="expected-output_6">Expected Output</h3>
+<p>A new CSV file with an additional <code>kfold</code> column indicating the fold assignment, with the target variable stratified using Sturges' binning method.</p>
+<pre><code class="language-plaintext">   Feature1  Feature2  target  kfold
+0       ...       ...    1.5      1
+1       ...       ...    2.1      3
+2       ...       ...    3.4      0
+3       ...       ...    2.9      4
+4       ...       ...    3.8      2
+</code></pre>
+<h2 id="learn-more">Learn More</h2>
+<p>For detailed usage instructions, please visit the <a href="../usage/">Usage Guide</a>.</p>
+<p>For more information about my work, other projects, or to get in touch, visit my <a href="https://surajwate.com">personal website</a></p>
+<hr />
+<p>If you have any feedback or suggestions, feel free to open an issue on <a href="https://github.com/surajwate/DataLab">GitHub</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

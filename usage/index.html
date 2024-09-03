@@ -1,0 +1,968 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../api_reference/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Usage - DataLab Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DataLab Documentation" class="md-header__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DataLab Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DataLab Documentation" class="md-nav__button md-logo" aria-label="DataLab Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DataLab Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the Package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing Categorical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Categorical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-numerical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing Numerical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Numerical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-values-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Values Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Missing Values Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-rare-categories-in-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Rare Categories in Categorical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Rare Categories in Categorical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-k-folds-for-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating K-Folds for Cross-Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating K-Folds for Cross-Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-k-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for K-Folds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-stratified-k-folds-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for Stratified K-Folds (Classification)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-stratified-k-folds-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for Stratified K-Folds (Regression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-references
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the Package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing Categorical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Categorical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-numerical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing Numerical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyzing Numerical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-values-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Values Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Missing Values Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-rare-categories-in-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Rare Categories in Categorical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Rare Categories in Categorical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-k-folds-for-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating K-Folds for Cross-Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating K-Folds for Cross-Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-k-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for K-Folds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-stratified-k-folds-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for Stratified K-Folds (Classification)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-for-stratified-k-folds-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage for Stratified K-Folds (Regression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-references
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="usage">Usage</h1>
+<p>This document provides a guide on how to use the <code>suraj_datalab</code> package for data analysis.</p>
+<h2 id="installation">Installation</h2>
+<p>Ensure that you have all the necessary dependencies installed by running:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<h2 id="importing-the-package">Importing the Package</h2>
+<p>To use the <code>suraj_datalab</code> package in your Python script, you need to import it as follows:</p>
+<pre><code class="language-python">from suraj_datalab import analyze, clean, fold_creator
+</code></pre>
+<h2 id="analyzing-categorical-features">Analyzing Categorical Features</h2>
+<p>The <code>categorical_feature</code> function allows you to analyze the distribution of a categorical feature with respect to a target variable. This function is useful for understanding how different categories are distributed and how they relate to the target variable.</p>
+<h3 id="example-usage">Example Usage</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Load your dataset
+df = pd.read_csv('your_dataset.csv')
+
+# Analyze a categorical feature
+distribution = analyze.categorical_feature(df, 'feature_name', 'target_name')
+print(distribution)
+</code></pre>
+<h3 id="output">Output</h3>
+<p>The output is a DataFrame showing:</p>
+<ul>
+<li>Total Count</li>
+<li>Total Percentage</li>
+<li>Percentages for each target class relative to the total</li>
+<li>Percentages of each target class within the feature category</li>
+</ul>
+<p>A plot is also generated, showing the distribution of the feature by the target variable.</p>
+<h2 id="analyzing-numerical-features">Analyzing Numerical Features</h2>
+<p>The <code>numerical_feature</code> function allows you to analyze the distribution of a numerical feature, with optional grouping by a target variable. This function provides detailed statistics, including outlier detection.</p>
+<h3 id="example-usage_1">Example Usage</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Load your dataset
+df = pd.read_csv('your_dataset.csv')
+
+# Analyze a numerical feature
+outliers_df, summary_df = analyze.numerical_feature(df, 'numerical_feature_name', 'target_name')
+print(outliers_df)
+print(summary_df)
+</code></pre>
+<h3 id="output_1">Output</h3>
+<p>The function returns:</p>
+<ul>
+<li><code>outliers_df</code>: A DataFrame containing the percentage of outliers.</li>
+<li><code>summary_df</code>: A DataFrame with overall statistics, as well as statistics for lower and upper outliers.</li>
+</ul>
+<p>A histogram and boxplot are also generated to visualize the distribution.</p>
+<h2 id="missing-values-summary">Missing Values Summary</h2>
+<p>The <code>missing_values</code> function generates a summary of missing values in the DataFrame.</p>
+<h3 id="example-usage_2">Example Usage</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab import analyze
+
+# Load your dataset
+df = pd.read_csv('your_dataset.csv')
+
+# Get missing values summary
+missing_summary = analyze.missing_values(df)
+print(missing_summary)
+</code></pre>
+<h3 id="output_2">Output</h3>
+<p>The function returns a DataFrame with the following information:</p>
+<ul>
+<li>Count of missing values</li>
+<li>Percentage of missing values</li>
+<li>Data type of each column that has missing values</li>
+</ul>
+<h2 id="handling-rare-categories-in-categorical-features">Handling Rare Categories in Categorical Features</h2>
+<p>The <code>RareCategoryReplacer</code> class in <code>clean.py</code> is used to replace rare categories in specified columns of a DataFrame with a replacement value.</p>
+<h3 id="example-usage_3">Example Usage</h3>
+<pre><code class="language-python">import pandas as pd
+from suraj_datalab.clean import RareCategoryReplacer
+
+# Load your dataset
+df = pd.read_csv('your_dataset.csv')
+
+# Define the columns to replace rare categories in
+columns_to_replace = ['feature_1', 'feature_2']
+
+# Create an instance of the RareCategoryReplacer
+replacer = RareCategoryReplacer(columns=columns_to_replace, proportion_threshold=0.02, replacement_value=&quot;Others&quot;)
+
+# Fit and transform the dataset
+df_transformed = replacer.fit_transform(df)
+print(df_transformed)
+</code></pre>
+<h3 id="output_3">Output</h3>
+<p>The output is a transformed DataFrame where rare categories in the specified columns are replaced with the value "Others".</p>
+<h2 id="creating-k-folds-for-cross-validation">Creating K-Folds for Cross-Validation</h2>
+<p>The <code>fold_creator.py</code> script provides functions to create K-Folds for cross-validation, including standard K-Folds, stratified K-Folds for classification, and stratified K-Folds for regression tasks.</p>
+<h3 id="example-usage-for-k-folds">Example Usage for K-Folds</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_kfolds
+
+# Create K-Folds for a dataset
+kfold_data = create_kfolds(file_path=&quot;your_dataset.csv&quot;, n_splits=5, shuffle=True, random_state=42)
+print(kfold_data)
+</code></pre>
+<h3 id="example-usage-for-stratified-k-folds-classification">Example Usage for Stratified K-Folds (Classification)</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_classification_kfolds
+
+# Create Stratified K-Folds for a classification dataset
+stratified_classification_data = create_classification_kfolds(
+    file_path=&quot;your_dataset.csv&quot;, target_column=&quot;target&quot;, n_splits=5, random_state=42
+)
+print(stratified_classification_data)
+</code></pre>
+<h3 id="example-usage-for-stratified-k-folds-regression">Example Usage for Stratified K-Folds (Regression)</h3>
+<pre><code class="language-python">from suraj_datalab.fold_creator import create_regression_kfolds
+
+# Create Stratified K-Folds for a regression dataset using 'sturges' binning method
+stratified_regression_data = create_regression_kfolds(
+    file_path=&quot;your_dataset.csv&quot;, target_column=&quot;target&quot;, n_splits=5, binning_method='sturges', random_state=42
+)
+print(stratified_regression_data)
+</code></pre>
+<h3 id="output_4">Output</h3>
+<p>Each of these functions will return a DataFrame with an additional 'kfold' column, indicating the fold assignment for each row in the dataset. The <code>create_regression_kfolds</code> function offers several methods for binning the target variable before applying stratified K-Folds, such as 'sturges', 'quantile', 'kmeans', and custom binning.</p>
+<h2 id="cross-references">Cross-references</h2>
+<p>For a general overview and more information about the project, please visit the <a href="../">Project Overview</a>.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<p>For more details about my work and other projects, visit my <a href="https://surajwate.com">personal website</a>.</p>
+<hr />
+<p>If you have any questions or run into issues, please check the <a href="https://github.com/surajwate/DataLab">GitHub repository</a> for additional help or to open an issue.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
