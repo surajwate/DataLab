@@ -1,36 +1,46 @@
-# Welcome to the Suraj DataLab Documentation
+# Welcome to Suraj Datalab Documentation
 
-Welcome to the documentation for the `suraj_datalab` Python package. This package provides simple yet effective data analysis tools to help you get insights from your data quickly. The goal of this package is to offer straightforward functions that cater to everyday data analysis needs.
+`Suraj Datalab` is a powerful Python package designed to streamline data analysis tasks. This package provides a set of tools for data cleaning, feature analysis, and preparing datasets for machine learning models. Whether you're dealing with categorical data, numerical data, or need to create folds for cross-validation, `Suraj Datalab` has you covered.
+
+## Key Features
+
+### Data Analysis
+
+- **Categorical Feature Analysis**: Analyze the distribution of categorical features with respect to a target variable.
+- **Numerical Feature Analysis**: Explore the distribution of numerical features, including outlier detection and visualization.
+
+### Data Cleaning
+
+- **Missing Values Summary**: Quickly generate a summary of missing values in your dataset.
+- **Rare Category Replacement**: Automatically identify and replace rare categories in your data to ensure robust models.
+
+### Cross-Validation Preparation
+
+- **K-Folds Creation**: Easily create standard K-Folds for cross-validation.
+- **Stratified K-Folds for Classification**: Ensure balanced folds in classification tasks by using stratified K-Folds.
+- **Stratified K-Folds for Regression**: Create stratified K-Folds for regression tasks using various binning methods.
+
+## Getting Started
+
+To get started with `Suraj Datalab`, check out the [Usage Guide](usage.md), which provides detailed examples and instructions on how to use each function in the package.
 
 ## Installation
 
-You can install the package via pip:
+You can install `Suraj Datalab` by cloning the repository and installing the required dependencies:
 
 ```bash
-pip install suraj_datalab
+git clone https://github.com/yourusername/suraj_datalab.git
+cd suraj_datalab
+pip install -r requirements.txt
 ```
 
-## Project Overview
+## Documentation
 
-The `suraj_datalab` package currently includes two primary functions designed to streamline your data analysis workflow:
+- [Usage Guide](usage.md)
+- [API Reference](api_reference.md)
+- [Examples](examples.md)
 
-- **`analyze_data`:** Perform a quick statistical analysis on your dataset.
-- **`summary_statistics`:** Generate summary statistics for a given dataset.
-
-These functions are particularly useful for data scientists, analysts, and anyone working with data who needs quick insights without diving deep into complex analysis frameworks.
-
-### Example Usage
-
-Here's a quick example of how to use the main functions:
-
-```python
-from suraj_datalab.analysis import analyze_data, summary_statistics
-
-# Assuming you have a pandas DataFrame `df`
-analyze_data(df)
-summary = summary_statistics(df)
-print(summary)
-```
+For more detailed information about each function and how to use it, refer to the [API Reference](api_reference.md).
 
 ## Learn More
 
