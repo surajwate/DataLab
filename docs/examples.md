@@ -246,3 +246,13 @@ A new CSV file with an additional `kfold` column indicating the fold assignment,
 3       ...       ...    2.9      4
 4       ...       ...    3.8      2
 ```
+
+## Learn More
+
+For detailed usage instructions, please visit the [Usage Guide](usage.md).
+
+For more information about my work, other projects, or to get in touch, visit my [personal website](https://surajwate.com)
+
+---
+
+If you have any feedback or suggestions, feel free to open an issue on [GitHub](https://github.com/surajwate/DataLab).
