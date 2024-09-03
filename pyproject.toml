@@ -5,6 +5,28 @@ description = "A package for data analysis"
 authors = ["Suraj Wate <suraj.wate@gmail.com>"]
 readme = "README.md"
 
+# Add classifiers for better visibility
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
+
+# Add keywords for improved searchability
+keywords = ["data analysis", "machine learning", "data cleaning", "k-fold"]
+
+# Add URLs for various resources
+[tool.poetry.urls]
+"Homepage" = "https://surajwate.com/DataLab/"
+"Repository" = "https://github.com/surajwate/DataLab"
+"Documentation" = "https://surajwate.com/DataLab/"
+"Issue Tracker" = "https://github.com/surajwate/DataLab/issues"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 pandas = "^2.2.2"
@@ -14,10 +36,8 @@ seaborn = "^0.13.2"
 scikit-learn = "^1.5.1"
 ipython = "^8.26.0"
 
-
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
-
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.6.0"
