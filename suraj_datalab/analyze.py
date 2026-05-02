@@ -150,7 +150,10 @@ def numerical_feature(df, feature, target=None, figsize=(15, 6), bins="sturges")
     if is_jupyter_notebook():
         plt.show()  # Show plot if in Jupyter notebook
     else:
-        plt.savefig(f"./plots/{feature}-{target}-boxplot.png")
+        if not os.path.exists("./plots"):
+            os.makedirs("./plots")
+        target_str = target if target else "overall"
+        plt.savefig(f"./plots/{feature}-{target_str}-boxplot.png")
 
     # Calculate overall statistics
     overall_summary = df[feature].describe().to_frame().T

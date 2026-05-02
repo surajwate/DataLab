@@ -49,14 +49,14 @@ Here’s how you can quickly get started with `suraj_datalab`:
 
 ```python
 import pandas as pd
-from suraj_datalab.analysis import analyze_categorical_feature, analyze_numerical_feature
+from suraj_datalab.analyze import categorical_feature, numerical_feature
 
 # Sample DataFrame
 data = {'Feature': ['A', 'B', 'A', 'B'], 'Transported': [True, False, True, False]}
 df = pd.DataFrame(data)
 
 # Analyze categorical feature
-result = analyze_categorical_feature(df, 'Feature', 'Transported')
+result = categorical_feature(df, 'Feature', 'Transported')
 print(result)
 ```
 
